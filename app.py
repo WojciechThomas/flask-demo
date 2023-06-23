@@ -1,8 +1,9 @@
 """
 This app shows how to use paths in Flask web application
 """
-from flask import Flask
 import os
+from flask import Flask
+
 
 application = Flask(__name__)
 
@@ -32,6 +33,10 @@ def square(anumber):
     output = f'<H1>{anumber} * {anumber} = {square} </H1>'
     return output
 
+
+def calculate_square(x):
+    """Calculates square root of the number"""
+    return x * x
 
 if __name__ == "__main__":
     application.run(port=int(os.environ.get('PORT')))
